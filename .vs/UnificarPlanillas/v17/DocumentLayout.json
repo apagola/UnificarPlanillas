@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\VS2022_Aratz\\UnificarPlanillas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAFAECAB-6853-4ED5-B1B4-749EEE832DAC}|UnificarPlanillas\\UnificarPlanillas.vbproj|c:\\vs2022_aratz\\unificarplanillas\\unificarplanillas\\planillas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EAFAECAB-6853-4ED5-B1B4-749EEE832DAC}|UnificarPlanillas\\UnificarPlanillas.vbproj|solutionrelative:unificarplanillas\\planillas.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAFAECAB-6853-4ED5-B1B4-749EEE832DAC}|UnificarPlanillas\\UnificarPlanillas.vbproj|C:\\VS2022_Aratz\\UnificarPlanillas\\unificarplanillas\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EAFAECAB-6853-4ED5-B1B4-749EEE832DAC}|UnificarPlanillas\\UnificarPlanillas.vbproj|solutionrelative:unificarplanillas\\principal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Planillas.vb",
+              "DocumentMoniker": "C:\\VS2022_Aratz\\UnificarPlanillas\\UnificarPlanillas\\Planillas.vb",
+              "RelativeDocumentMoniker": "UnificarPlanillas\\Planillas.vb",
+              "ToolTip": "C:\\VS2022_Aratz\\UnificarPlanillas\\UnificarPlanillas\\Planillas.vb",
+              "RelativeToolTip": "UnificarPlanillas\\Planillas.vb",
+              "ViewState": "AgIAADEKAAAAAAAAAAAuwEoKAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-13T13:02:11.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Principal.vb",
+              "DocumentMoniker": "C:\\VS2022_Aratz\\UnificarPlanillas\\UnificarPlanillas\\Principal.vb",
+              "RelativeDocumentMoniker": "UnificarPlanillas\\Principal.vb",
+              "ToolTip": "C:\\VS2022_Aratz\\UnificarPlanillas\\UnificarPlanillas\\Principal.vb",
+              "RelativeToolTip": "UnificarPlanillas\\Principal.vb",
+              "ViewState": "AgIAADEAAAAAAAAAAAAnwE4AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-01T06:32:46.366Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

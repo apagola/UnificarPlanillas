@@ -1,0 +1,145 @@
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.Resources.resources
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.GenerateResource.cache
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.CoreCompileInputs.cache
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.Opciones.resources
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.Principal.resources
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\itextsharp.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\itextsharp.xml
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.CopyComplete
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.exe.config
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.exe
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.pdb
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.xml
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.exe
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.xml
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.pdb
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.ResolveComReference.cache
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\log4net.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\log4net.xml
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\cs\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\da\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\de\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\en\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\es\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\fi\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\fr\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\hu\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\it\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\ja\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\ko\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\nl\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\pl\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\pt\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\ru\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\sk\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\sv\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\th\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\tr\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\bin\Debug\stdole.dll
+C:\Users\zitu13\source\repos\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbprojAssemblyReference.cache
+X:\CAF\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.AssemblyReference.cache
+X:\CAF\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.exe.config
+X:\CAF\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.ResolveComReference.cache
+X:\CAF\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.exe
+X:\CAF\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.xml
+X:\CAF\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.pdb
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.exe.config
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.exe
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.pdb
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.xml
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\BouncyCastle.Crypto.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\CrystalDecisions.Shared.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\itextsharp.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\log4net.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\itextsharp.xml
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\log4net.xml
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\cs\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\da\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\de\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\en\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\es\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\fi\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\fr\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\hu\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\it\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\ja\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\ko\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\nl\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\pl\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\pt\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\ru\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\sk\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\sv\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\th\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\tr\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.ResolveComReference.cache
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.Principal.resources
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.Resources.resources
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.Opciones.resources
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.GenerateResource.cache
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.CoreCompileInputs.cache
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.exe
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.xml
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.pdb
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.exe.manifest
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\bin\Debug\Unificador planillas.application
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.exe.manifest
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificador planillas.application
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\UnificarPlanillas.vbproj.AssemblyReference.cache
+C:\VS2022_Aratz\UnificarPlanillas\UnificarPlanillas\obj\Debug\Unificar.22B0D0B6.Up2Date
