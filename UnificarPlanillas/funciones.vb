@@ -54,6 +54,30 @@
             dbConnection.Close()
         End Try
     End Function
+
+    ' Igual que cargar_todos pero devuelve el DataSet COMPLETO (todas las tablas del batch).
+    ' Necesario para get_info_SAP_ruedas_hierro_nSeries, cuyo SQL devuelve varias tablas (START/END, ASSEMBLY, VALORES, TIEMPOS, SERIALNO, NO EXPORTABLES).
+    Public Shared Function cargar_dataset(ByVal queryString As String, Optional ByVal conex As String = connectionString) As System.Data.DataSet
+        Dim dbConnection As System.Data.IDbConnection = New System.Data.SqlClient.SqlConnection(conex)
+        Dim dbCommand As System.Data.IDbCommand = New System.Data.SqlClient.SqlCommand
+
+        Try
+            dbCommand.CommandText = queryString
+            dbCommand.Connection = dbConnection
+            dbCommand.CommandTimeout = 300
+
+            Dim dataAdapter As System.Data.IDbDataAdapter = New System.Data.SqlClient.SqlDataAdapter
+            dataAdapter.SelectCommand = dbCommand
+            Dim dataSet As System.Data.DataSet = New System.Data.DataSet
+            dataAdapter.Fill(dataSet)
+
+            Return dataSet
+        Catch ex As Exception
+            Return Nothing
+        Finally
+            dbConnection.Close()
+        End Try
+    End Function
 #End Region
 #Region "UPDATE"
     Public Shared Function Update(ByVal queryString As String, Optional ByVal conex As String = connectionString) As Integer

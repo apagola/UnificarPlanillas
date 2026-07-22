@@ -88,6 +88,39 @@ Public Class Principal
                 End If
             Next
 
+            ' ===== Segundo paso: JSON SAP de ruedas de hierro pendientes (generarJson = 1) =====
+            ' Patron reclamar -> escribir -> marcar: si la escritura falla NO se marca nada (se reintenta).
+            Try
+                Dim idsRuedas As List(Of Integer) = PlanillasSAP.getRuedasPendientesJSON()
+                If idsRuedas IsNot Nothing AndAlso idsRuedas.Count > 0 Then
+                    Dim estadoSAP As String = "Generando JSON SAP de ruedas (" & idsRuedas.Count & " nSerie)..."
+                    If InvokeRequired Then
+                        Invoke(New MethodInvoker(Function()
+                                                     estadoLbl.Text = estadoSAP
+                                                 End Function))
+                    Else
+                        estadoLbl.Text = estadoSAP
+                    End If
+
+                    Dim jsonSAP As String = PlanillasSAP.generarJSON(idsRuedas)
+
+                    If String.IsNullOrEmpty(jsonSAP) OrElse jsonSAP = "[]" Then
+                        ' Nada que exportar: no se escribe fichero vacio en la carpeta de SAP, se registra y se limpia la cola
+                        SimpleLog.logInfo("JSON SAP ruedas: 0 operaciones pendientes para " & idsRuedas.Count & " nSerie marcadas. No se escribe fichero.", 0)
+                        PlanillasSAP.desencolar(idsRuedas)
+                    Else
+                        Dim nombreFichero As String = "ruedasSAP_" & Now.ToString("yyyyMMdd_HHmmss") & ".json"
+                        ' Escribir PRIMERO; solo si no lanza, marcar *_exportado y limpiar generarJson
+                        Dim ruta As String = PlanillasSAP.escribirEnCarpetaSAP(My.Settings.carpetaSAP, jsonSAP, nombreFichero)
+                        PlanillasSAP.marcarExportadasYDesencolar(idsRuedas)
+                        SimpleLog.logInfo("JSON SAP ruedas escrito en " & ruta & " (" & idsRuedas.Count & " nSerie).", 0)
+                    End If
+                End If
+            Catch exSAP As Exception
+                ' Un fallo aqui NO marca exportado ni limpia la cola -> se reintenta en la siguiente vuelta
+                SimpleLog.logInfo("Error al generar/escribir el JSON SAP de ruedas: " & exSAP.Message, 1)
+            End Try
+
             If InvokeRequired Then
                 Invoke(New MethodInvoker(Function()
                                              actualizarBtn.Enabled = True

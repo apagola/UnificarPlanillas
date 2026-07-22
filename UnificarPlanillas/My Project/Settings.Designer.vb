@@ -101,6 +101,18 @@ Namespace My
                 Me("minimizar") = value
             End Set
         End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property carpetaSAP() As String
+            Get
+                Return CType(Me("carpetaSAP"),String)
+            End Get
+            Set
+                Me("carpetaSAP") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

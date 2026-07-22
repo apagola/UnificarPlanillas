@@ -33,6 +33,9 @@ Partial Class Opciones
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.minimizarCbx = New System.Windows.Forms.CheckBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.carpetaSAPPath = New System.Windows.Forms.TextBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.minutosUpD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,7 +108,7 @@ Partial Class Opciones
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(248, 155)
+        Me.Button3.Location = New System.Drawing.Point(248, 205)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(131, 30)
         Me.Button3.TabIndex = 9
@@ -125,11 +128,39 @@ Partial Class Opciones
         Me.minimizarCbx.Text = "Minimización en bandeja del sistema"
         Me.minimizarCbx.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 148)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(220, 13)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Carpeta de SAP (dejar el JSON de ruedas)"
+        '
+        'carpetaSAPPath
+        '
+        Me.carpetaSAPPath.Location = New System.Drawing.Point(12, 164)
+        Me.carpetaSAPPath.Name = "carpetaSAPPath"
+        Me.carpetaSAPPath.Size = New System.Drawing.Size(222, 20)
+        Me.carpetaSAPPath.TabIndex = 12
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(240, 161)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(132, 24)
+        Me.Button4.TabIndex = 13
+        Me.Button4.Text = "Seleccionar carpeta"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Opciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(391, 197)
+        Me.ClientSize = New System.Drawing.Size(391, 250)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.carpetaSAPPath)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.minimizarCbx)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label3)
@@ -160,4 +191,7 @@ Partial Class Opciones
     Friend WithEvents Label3 As Label
     Friend WithEvents Button3 As Button
     Friend WithEvents minimizarCbx As CheckBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents carpetaSAPPath As TextBox
+    Friend WithEvents Button4 As Button
 End Class
