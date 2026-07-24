@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="UnificarPlanillas.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+    </startup>
+    <userSettings>
+        <UnificarPlanillas.My.MySettings>
+            <setting name="origen" serializeAs="String">
+                <value>\\172.24.240.119\pdf\PRENSA</value>
+            </setting>
+            <setting name="destino" serializeAs="String">
+                <value>C:\Users\95853\Desktop\PlanillasPdfs</value>
+            </setting>
+            <setting name="tiempoAct" serializeAs="String">
+                <value>15</value>
+            </setting>
+            <setting name="minimizar" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="carpetaSAP" serializeAs="String">
+                <value />
+            </setting>
+        </UnificarPlanillas.My.MySettings>
+    </userSettings>
+</configuration>

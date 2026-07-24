@@ -40,6 +40,12 @@ Public Class PlanillasSAP
         RuedasHierroSAP.Update_generarJson(ids, False)
     End Sub
 
+    ' Cuenta los registros (RECORD_ID) del JSON SAP. Solo para la traza unificada.
+    Public Shared Function contarRegistros(ByVal jsonContent As String) As Integer
+        If String.IsNullOrEmpty(jsonContent) Then Return 0
+        Return jsonContent.Split(New String() {"""RECORD_ID"""}, StringSplitOptions.None).Length - 1
+    End Function
+
     ' Escribe el JSON en la carpeta de SAP. Devuelve la ruta del fichero escrito (lanza si falla).
     Public Shared Function escribirEnCarpetaSAP(ByVal carpetaSAP As String, ByVal jsonContent As String, ByVal nombreFichero As String) As String
         If String.IsNullOrWhiteSpace(carpetaSAP) Then

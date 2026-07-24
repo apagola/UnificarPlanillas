@@ -93,6 +93,15 @@ Public Class Principal
             Try
                 Dim idsRuedas As List(Of Integer) = PlanillasSAP.getRuedasPendientesJSON()
                 If idsRuedas IsNot Nothing AndAlso idsRuedas.Count > 0 Then
+                    ' ===== Traza unificada del "imprimir JSON SAP" (fichero dedicado, estilo ErisEnlaceERP) =====
+                    ' Solo se traza cuando hay nSerie pendientes (evita spam de la vuelta del timer).
+                    Dim inicioSAP As DateTime = Now
+                    SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerLinea("*"c))
+                    SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerTitulo("IMPRIMIR JSON SAP START", "***"))
+                    SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerLinea("*"c))
+                    SimpleLog.WriteLog("trazaUnificada", "1. JSON SAP RUEDAS")
+                    SimpleLog.WriteLog("trazaUnificada", "    1.1. Reclamar cola (generarJson=1): " & idsRuedas.Count & " nSerie pendientes")
+
                     Dim estadoSAP As String = "Generando JSON SAP de ruedas (" & idsRuedas.Count & " nSerie)..."
                     If InvokeRequired Then
                         Invoke(New MethodInvoker(Function()
@@ -103,21 +112,37 @@ Public Class Principal
                     End If
 
                     Dim jsonSAP As String = PlanillasSAP.generarJSON(idsRuedas)
+                    Dim resultadoSAP As String = "OK"
 
                     If String.IsNullOrEmpty(jsonSAP) OrElse jsonSAP = "[]" Then
                         ' Nada que exportar: no se escribe fichero vacio en la carpeta de SAP, se registra y se limpia la cola
-                        SimpleLog.logInfo("JSON SAP ruedas: 0 operaciones pendientes para " & idsRuedas.Count & " nSerie marcadas. No se escribe fichero.", 0)
+                        SimpleLog.WriteLog("trazaUnificada", "    1.2. Generar JSON: 0 registros -> no se escribe fichero")
                         PlanillasSAP.desencolar(idsRuedas)
+                        SimpleLog.WriteLog("trazaUnificada", "    1.3. Desencolar (sin exportar): " & idsRuedas.Count & " nSerie")
+                        SimpleLog.logInfo("JSON SAP ruedas: 0 operaciones pendientes para " & idsRuedas.Count & " nSerie marcadas. No se escribe fichero.", 0)
+                        resultadoSAP = "OK (vacio)"
                     Else
+                        SimpleLog.WriteLog("trazaUnificada", "    1.2. Generar JSON: " & PlanillasSAP.contarRegistros(jsonSAP) & " registros")
                         Dim nombreFichero As String = "ruedasSAP_" & Now.ToString("yyyyMMdd_HHmmss") & ".json"
                         ' Escribir PRIMERO; solo si no lanza, marcar *_exportado y limpiar generarJson
                         Dim ruta As String = PlanillasSAP.escribirEnCarpetaSAP(My.Settings.carpetaSAP, jsonSAP, nombreFichero)
+                        SimpleLog.WriteLog("trazaUnificada", "    1.3. Escribir fichero: " & nombreFichero)
                         PlanillasSAP.marcarExportadasYDesencolar(idsRuedas)
+                        SimpleLog.WriteLog("trazaUnificada", "    1.4. Marcar exportadas y desencolar: " & idsRuedas.Count & " nSerie")
                         SimpleLog.logInfo("JSON SAP ruedas escrito en " & ruta & " (" & idsRuedas.Count & " nSerie).", 0)
                     End If
+
+                    Dim durMs As Long = CLng((Now - inicioSAP).TotalMilliseconds)
+                    SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerLinea("*"c))
+                    SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerTitulo("IMPRIMIR JSON SAP END (" & resultadoSAP & ", " & durMs & " ms)", "***"))
+                    SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerLinea("*"c))
                 End If
             Catch exSAP As Exception
                 ' Un fallo aqui NO marca exportado ni limpia la cola -> se reintenta en la siguiente vuelta
+                SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerLinea("!"c))
+                SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerTitulo("ERROR", "!!!"))
+                SimpleLog.WriteLog("trazaUnificada", SimpleLog.BannerLinea("!"c))
+                SimpleLog.WriteLog("trazaUnificada", exSAP.ToString())
                 SimpleLog.logInfo("Error al generar/escribir el JSON SAP de ruedas: " & exSAP.Message, 1)
             End Try
 
