@@ -2622,7 +2622,20 @@ Public Class Planillas
                     s.AppendLine("  	  AND (hp.colada <> '') ")
                     s.AppendLine("  	  AND (hp.Nserie <> '')")
                     s.AppendLine("	) AS pieza ON dae.Colada = pieza.colada AND dae.Nserie = pieza.Nserie ")
+                    ' ID 340 - Solo salen a la planilla las operaciones DE APRIETE (igual que historicoProduc.crystal del web).
+                    ' datosAtornilladoEgoki guarda todas las operaciones de la ruta de montaje, no solo los aprietes:
+                    ' aplicar Molycote, aplicar Tectyl, limpiar, marcar, barnizar, "operaciones finales"... Esas no aprietan
+                    ' nada y salian en el Crystal como filas en blanco (CAF, eje colada 101507 / nSerie 0078).
+                    ' Que cuenta como apriete: la operacion que tiene LIMITES definidos, es decir MaximoPar <> 0
+                    ' o MaximoAng <> 0 (hay aprietes controlados solo por par y otros solo por angulo, de ahi el OR).
+                    ' Se mira el LIMITE y no el valor medido (dae.Par / dae.Angulo) a proposito: un apriete real
+                    ' registrado con par 0 -una llave que no midio- tiene que seguir apareciendo en un informe que
+                    ' certifica pares de apriete. Filtrar por el valor medido lo haria desaparecer sin dejar rastro.
+                    ' El filtro va DENTRO de la subconsulta del LEFT OUTER JOIN, nunca en el WHERE exterior ni
+                    ' convirtiendo el join en INNER: los datos de la pieza viajan en estas mismas filas, asi que
+                    ' filtrar fuera dejaria sin informe a los ejes que no tengan atornillado.
                     s.AppendLine("	WHERE (dae.estadoOperacion = 'True') AND (dae.resultado = 'True') ")
+                    s.AppendLine("		AND (ISNULL(dae.MaximoPar, 0) <> 0 OR ISNULL(dae.MaximoAng, 0) <> 0) ")
                     s.AppendLine(") AS b ON a.idPiezasNumerosSerie = b.idPieza ")
                     s.AppendLine("LEFT OUTER JOIN ")
                     s.AppendLine("( ")

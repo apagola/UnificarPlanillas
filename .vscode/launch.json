@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": " * ZIP para CAF (bin\\Debug) + Abrir Carpeta",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\\.vscode\\zip-entrega.ps1",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
