@@ -78,6 +78,35 @@
             dbConnection.Close()
         End Try
     End Function
+
+    ' SELECT con un parametro de fecha. A diferencia de cargar_todos, NO traga la excepcion:
+    ' el paso de Crystal necesita distinguir "0 piezas" de "fallo al consultar".
+    Public Shared Function cargar_fecha(ByVal queryString As String, ByVal nombreParam As String, ByVal valor As DateTime, Optional ByVal conex As String = connectionString) As System.Data.DataTable
+        Using dbConnection As New System.Data.SqlClient.SqlConnection(conex)
+            Using dbCommand As New System.Data.SqlClient.SqlCommand(queryString, dbConnection)
+                dbCommand.CommandTimeout = 300
+                dbCommand.Parameters.Add(nombreParam, System.Data.SqlDbType.DateTime).Value = valor
+                Dim dt As New System.Data.DataTable
+                Using dataAdapter As New System.Data.SqlClient.SqlDataAdapter(dbCommand)
+                    dataAdapter.Fill(dt)
+                End Using
+                Return dt
+            End Using
+        End Using
+    End Function
+#End Region
+#Region "EJECUTAR"
+    ' Ejecuta un batch (UPDATE/EXEC) y LANZA la excepcion si falla (Update devuelve -1 y no dice por que).
+    ' Timeout como el BD.GetDatatable del web (3000 s): el repaso de numeros de serie recorre todo Crystal.
+    Public Shared Function ejecutar(ByVal queryString As String, Optional ByVal conex As String = connectionString) As Integer
+        Using dbConnection As New System.Data.SqlClient.SqlConnection(conex)
+            Using dbCommand As New System.Data.SqlClient.SqlCommand(queryString, dbConnection)
+                dbCommand.CommandTimeout = 3000
+                dbConnection.Open()
+                Return dbCommand.ExecuteNonQuery()
+            End Using
+        End Using
+    End Function
 #End Region
 #Region "UPDATE"
     Public Shared Function Update(ByVal queryString As String, Optional ByVal conex As String = connectionString) As Integer

@@ -132,6 +132,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrystalHistorico.vb" />
     <Compile Include="funciones.vb" />
     <Compile Include="Planillas.vb" />
     <Compile Include="PlanillasSAP.vb" />
@@ -167,6 +168,7 @@
     <Compile Include="Settings.vb" />
     <Compile Include="GestorPDF.vb" />
     <Compile Include="SimpleLog.vb" />
+    <Compile Include="TraduccionesInformes.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Principal.resx">

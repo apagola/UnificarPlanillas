@@ -22,5 +22,45 @@ Unificador planillas
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
+<member name="M:UnificarPlanillas.CrystalHistorico.sqlValoresCrystal_operacionesPieza(System.Text.StringBuilder)">
+ <summary>
+ Ramas del "gran select" de sqlValoresCrystal_pieza para las operaciones DE PIEZA
+ (piezasNumerosSerieOperaciones / piezasNumerosSerieOperaciones_valor), que no estan en la
+ ruta del plano y por eso no salian por los JOIN a planosRutasOperaciones. Se enlazan por
+ hp.idPiezasNumerosSerieOperaciones. La copia por pieza no suele traer el nColumna de las
+ cotas: se recupera del catalogo (operaciones_valor) por nombre de operacion y orden, igual
+ que hace la APK al recibir el resultado (ID 349, WebServiceFunciones.SQL_nColumnaValorOperacionPieza).
+ Empiezan por UNION: se añaden detras de las ramas de la ruta.
+ </summary>
+</member>
+<member name="T:UnificarPlanillas.TraduccionesInformes.PlanillaCrystal">
+ <summary>
+ Una planilla a generar: los datos (traducidos si hay idioma) y el idioma ("" = sin traducir).
+ </summary>
+</member>
+<member name="M:UnificarPlanillas.TraduccionesInformes.Get_IdiomasPieza(System.Int32)">
+ <summary>
+ Idiomas en los que hay que sacar la planilla de la pieza: los del cliente de su pedido
+ (pedido.cliente es texto: se busca en la maestra por nombre, prefiriendo el cliente de
+ la misma area que el comodin). Solo para planos de EJES MONTADOS (area 2).
+ </summary>
+</member>
+<member name="M:UnificarPlanillas.TraduccionesInformes.Traducir(System.Data.DataTable,System.Int32)">
+ <summary>
+ Traduce la parte de atornillado de los datos de la planilla al idioma indicado.
+ Devuelve los textos que no tienen traduccion (se quedan como estaban).
+ </summary>
+</member>
+<member name="M:UnificarPlanillas.TraduccionesInformes.Get_PlanillasPieza(System.Int32,System.Data.DataTable)">
+ <summary>
+ Planillas de una pieza a partir de los datos de Planillas.crystal: una por cada idioma
+ de su cliente (cada una con su copia traducida), o una sin traducir si no tiene idiomas.
+ </summary>
+</member>
+<member name="M:UnificarPlanillas.TraduccionesInformes.NombreFichero(System.String,System.String)">
+ <summary>
+ Nombre de fichero con el idioma al final: nombre_Idioma ("" = el nombre de siempre).
+ </summary>
+</member>
 </members>
 </doc>

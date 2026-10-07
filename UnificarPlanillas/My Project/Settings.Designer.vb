@@ -113,6 +113,30 @@ Namespace My
                 Me("carpetaSAP") = value
             End Set
         End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2")>  _
+        Public Property horaCrystal() As Integer
+            Get
+                Return CType(Me("horaCrystal"),Integer)
+            End Get
+            Set
+                Me("horaCrystal") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2000-01-01")>  _
+        Public Property ultimaActCrystal() As Date
+            Get
+                Return CType(Me("ultimaActCrystal"),Date)
+            End Get
+            Set
+                Me("ultimaActCrystal") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -30,8 +30,10 @@ Public Class GestorPDF
     Private Shared ftpusername As String = "cafmiira"
     Private Shared ftppassword As String = "&zR6N@vmTgj2gvx2"
 
-    Public Shared Function createPlanillaBasePDF(ByVal idPieza As String) As String
-        Dim fileBase As String = ""
+    ' Devuelve las planillas base generadas: (idioma, ruta del PDF). Idioma "" = sin traducir.
+    ' Lista vacia = no se ha generado nada.
+    Public Shared Function createPlanillaBasePDF(ByVal idPieza As String) As List(Of KeyValuePair(Of String, String))
+        Dim fileBases As New List(Of KeyValuePair(Of String, String))
         If Not Directory.Exists(pathTemporal) Then
             Directory.CreateDirectory(pathTemporal)
         End If
@@ -75,22 +77,35 @@ Public Class GestorPDF
 
             If fileDownload <> "" Then
                 Try
-                    Dim crystalReport As ReportDocument
-                    crystalReport = New ReportDocument()
-                    crystalReport.Load(fileDownload)
                     ' ACTUALIZAR TODOS LOS VALORES DE CRYSTAL: primero datos base, luego histórico
                     ActualizarValoresCrystal_TODOS(CInt(idPieza))
                     Dim ldt As Data.DataTable = Planillas.crystal(idPieza) ' los datos a imprimir
-                    'generar reporte
-                    crystalReport.SetDataSource(ldt)
-                    'se genera el PDF por pieza
-                    ExportToPDF(crystalReport, pathTemporal & "/", plano & "-" & nSerie & ".pdf")
-                    fileBase = pathTemporal & "/" & plano & "-" & nSerie & ".pdf"
+                    ' Una planilla por idioma del cliente (ejes montados), con el atornillado traducido;
+                    ' sin idiomas, una sola sin traducir y con el nombre de siempre
+                    For Each planilla In TraduccionesInformes.Get_PlanillasPieza(CInt(idPieza), ldt)
+                        If planilla.faltan.Count > 0 Then
+                            logFaltanTraducciones(idPieza, plano & "-" & nSerie, planilla)
+                        End If
+                        ' ExportToPDF hace Dispose del informe: se carga uno por planilla
+                        Dim crystalReport As New ReportDocument()
+                        crystalReport.Load(fileDownload)
+                        crystalReport.SetDataSource(planilla.datos)
+                        'se genera el PDF por pieza (e idioma)
+                        Dim nombreBase As String = TraduccionesInformes.NombreFichero(plano & "-" & nSerie, planilla.idioma) & ".pdf"
+                        ExportToPDF(crystalReport, pathTemporal & "/", nombreBase)
+                        fileBases.Add(New KeyValuePair(Of String, String)(planilla.idioma, pathTemporal & "/" & nombreBase))
+                        If planilla.datos IsNot ldt AndAlso planilla.datos IsNot Nothing Then planilla.datos.Dispose()
+                    Next
                     File.Delete(fileDownload)
                     ldt.Dispose()
                 Catch ex As Exception
                     ' MessageBox.Show(ex.Message, "Error al generar reporte de cristal", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     SimpleLog.logInfo("Error al generar reporte de cristal de " & plano & "-" & nSerie & ": " & ex.Message, 1)
+                    ' Si falla un idioma no se entrega ninguno (como antes: o todo o nada)
+                    For Each fb In fileBases
+                        If File.Exists(fb.Value) Then File.Delete(fb.Value)
+                    Next
+                    fileBases.Clear()
                     Planillas.updatePlanillaUnida(idPieza)
                     SimpleLog.logInfo("Marcada como exportada la pieza con id " & idPieza & " después de localizar error en el .rpt", 1)
                 End Try
@@ -100,8 +115,20 @@ Public Class GestorPDF
             SimpleLog.logInfo("Error al crear planilla base: " & ex.Message, 1)
         End Try
 
-        Return fileBase
+        Return fileBases
     End Function
+
+    ' Desatendida: no se bloquea por traducciones que faltan. Se genera con el texto original
+    ' y se deja constancia (pieza, idioma y textos) en el log y en la traza unificada.
+    Private Shared Sub logFaltanTraducciones(ByVal idPieza As String, ByVal nombrePieza As String, ByVal planilla As TraduccionesInformes.PlanillaCrystal)
+        Dim texto As String = "Faltan traducciones (" & planilla.idioma & ") en la planilla de " & nombrePieza & " (idPieza " & idPieza & "), " &
+                              planilla.faltan.Count & " texto(s) sin traducir: " & String.Join(" | ", planilla.faltan)
+        SimpleLog.logInfo(texto, 1)
+        SimpleLog.WriteLog("trazaUnificada", "FALTAN TRADUCCIONES -> pieza " & idPieza & " (" & nombrePieza & "), idioma " & planilla.idioma & ":")
+        For Each t In planilla.faltan
+            SimpleLog.WriteLog("trazaUnificada", "    - " & t)
+        Next
+    End Sub
 
     Protected Shared Function ExportToPDF(rpt As ReportDocument, ruta As String, NombreArchivo As String) As String
         Dim vFileName As String = Nothing
@@ -135,12 +162,13 @@ Public Class GestorPDF
         Dim sourceDocument As Document = Nothing
         Dim pdfCopyProvider As PdfCopy = Nothing
         Dim importedPage As PdfImportedPage
-        Dim outputPdfPath As String = My.Settings.destino & "\" & colada_numFile & ".pdf"
 
-        ' Creación y unión de fichero PDF base
-        Dim fileBase As String = createPlanillaBasePDF(idPieza)
+        ' Creación y unión de fichero PDF base: uno por idioma del cliente (o uno sin traducir)
+        Dim fileBases As List(Of KeyValuePair(Of String, String)) = createPlanillaBasePDF(idPieza)
 
-        If fileBase <> "" Then
+        For Each fb In fileBases
+            Dim fileBase As String = fb.Value
+            Dim outputPdfPath As String = My.Settings.destino & "\" & TraduccionesInformes.NombreFichero(colada_numFile, fb.Key) & ".pdf"
             If File.Exists(outputPdfPath) Then
                 File.Delete(outputPdfPath)
             End If
@@ -196,9 +224,9 @@ Public Class GestorPDF
             sourceDocument.Close()
             SimpleLog.logInfo("Creado documento en " & outputPdfPath)
             File.Delete(fileBase)
-        End If
+        Next
 
-        Return fileBase <> ""
+        Return fileBases.Count > 0
     End Function
 
     Public Shared Function totalPageCount(ByVal file As String) As Integer

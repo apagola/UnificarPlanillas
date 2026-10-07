@@ -2661,7 +2661,9 @@ Public Class Planillas
                     s.AppendLine("  CROSS JOIN (SELECT nSerie, proximaCalibracion FROM dbo.maquinas_proximaCalibracion AS maquinas_proximaCalibracion_11 WHERE (id = 11)) AS dinamolc")
                     s.AppendLine("  CROSS JOIN (SELECT nSerie, proximaCalibracion FROM dbo.maquinas_proximaCalibracion AS maquinas_proximaCalibracion_12 WHERE (id = 12)) AS dinamoscs")
                     s.AppendLine("  INNER JOIN (")
-                    s.AppendLine("  	SELECT hp.idPieza AS idPieza, hp.Nserie, hp.colada FROM dbo.historicoProduc AS hp ")
+                    ' DISTINCT y solo idPieza: sin el, sale una fila por cada operacion que pide colada + nSerie
+                    ' (p.ej. 2 de atornillado), "c" se multiplica y duplica todo el atornillado (eje colada 101747 / nSerie 0019).
+                    s.AppendLine("  	SELECT DISTINCT hp.idPieza AS idPieza FROM dbo.historicoProduc AS hp ")
                     s.AppendLine("  	INNER JOIN dbo.planosRutasOperaciones AS pro ON hp.idOperacion = pro.id")
                     s.AppendLine("  	WHERE (hp.idPieza = '" & idPieza & "') ")
                     s.AppendLine("  	  AND (pro.parte = 0) ")
